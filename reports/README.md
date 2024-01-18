@@ -148,7 +148,7 @@ In future patches of this project, we would like to add more flexibility to the 
 > *complete copy of our development environment, one would have to run the following commands*
 >
 > Answer:
-#### Prerequisition
+### Prerequisition
 As a prerequisite, we recommend setting up a virtual environment for this project using Anaconda.
 
 ```bash
@@ -171,7 +171,18 @@ Lastly, the data will be cleaned, normalized and saved as dataloaders:
 ```bash
 $ python clean_data.py
 ```
+### Train & Predict
+A new model can be trained by:
+```bash
+$ python train.py
+```
+And be used for prediction by:
+```bash
+$ python predict.py
+```
+Both .py files contains args that can be parsed, use --help for more info.
 
+### Docker
 Furthermore we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
 ```bash
 $ docker build -f train_model.dockerfile . -t trainer:latest
