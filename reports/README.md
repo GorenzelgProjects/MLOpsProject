@@ -172,11 +172,11 @@ Lastly, the data will be cleaned, normalized and saved as dataloaders:
 $ python clean_data.py
 ```
 ### Train & Predict
-A new model can be trained by:
+A new model can be trained with:
 ```bash
 $ python train.py
 ```
-And be used for prediction by:
+And be used for prediction with:
 ```bash
 $ python predict.py
 ```
