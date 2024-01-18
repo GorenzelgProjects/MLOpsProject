@@ -1,18 +1,6 @@
 """Optimization study for a PyTorch CNN with Optuna.
-
-Hyperparameter optimization example of a PyTorch Convolutional Neural Network
-for the MNIST dataset of handwritten digits using the hyperparameter
-optimization framework Optuna.
-
-The MNIST dataset contains 60,000 training images and 10,000 testing images,
-where each sample is a small, square, 28×28 pixel grayscale image of
-handwritten single digits between 0 and 9.
-
-This script requires installing the following packages:
-  torch, pandas, optuna
-
-Author: elena-ecn
-Date: 2021
+Inspiration taken from https://github.com/elena-ecn/optuna-optimization-for-PyTorch-CNN/blob/main/optuna_optimization.py
+By elena-ecn, 2021
 """
 
 import os
