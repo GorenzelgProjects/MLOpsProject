@@ -428,9 +428,13 @@ Already in the early project days, we focused on implementing profiling to see w
 > Answer:
 
 We did not get a fully built/running cloud model, but we did make use of the following:
+
 Cloud Storage: This service was used for the storage of data, models, and trained models. This is done by having our buckets here. Furthermore, this is a necessary service to use if we would use Google Cloud.
+
 Container Registry: Here we saved our docker images, created from our local computers.
+
 Compute Engine: This provided us with WMs that we should use if we wanted to run code on Google Cloud.
+
 Vertex AI: This is a place where it is possible to quickly get an AI model and pre-build a container going to some data. Later in the project, we could have been using the custom option to get our code working on the cloud with custom containers. (We tried a lot...)
 
 
