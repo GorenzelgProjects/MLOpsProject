@@ -156,7 +156,7 @@ $ conda activate [your_environment_name]
 ```
 A requirements.txt file has been made in which we have stated all the libraries and packages.
 ```bash
-$ cd [path_to_project]
+$ cd [path_to_requirements.txt]
 $ pip install -r requirements.txt
 ```
 
