@@ -453,7 +453,7 @@ Vertex AI: This is a place where it is possible to quickly get an AI model and p
 >
 > Answer:
 
---- question 18 fill here ---
+As mentioned above, we did not get to have the most success with this. But what we did was to build out docker images on our computers, which were pushed to the cloud. On the cloud, we tried to build up an instance to run this with VMs. For experiment purposes, we used the minimal hardware available to us. Of course, we had made a custom container for this. That should be said, we did spend a long time on this and we should probably have allocated more time to this because it is a hard topic.
 
 ### Question 19
 
