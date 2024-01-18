@@ -498,7 +498,8 @@ We build our images locally on our computers, therefore there is nothing in this
 >
 > Answer:
 
-We deployed our model locally only. We did try to implement it on the cloud as mentioned before.
+
+We succeeded in deploying our model locally. To achieve this, we built a Docker image around our main file, utilizing Fast API as our web framework. The main concept is that users can interact with a trained model, providing inputs about information for a Counter-Strike round, and the model will then return a prediction based on the user's input on who will win the round. However we did try to implement it on the cloud as mentioned before.
 
 ### Question 23
 
