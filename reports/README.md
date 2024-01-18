@@ -154,10 +154,6 @@ As a prerequisite, we recommend setting up a virtual environment for this projec
 $ conda create --name [your_environment_name] python=3.9
 $ conda activate [your_environment_name] 
 ```
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Der skal skrives noget her
-!!!!!!!!!!!!!!!!!!!!!!!!!!
 A requirements.txt file has been made in which we have stated all the libraries and packages.
 ```bash
 $ cd [path_to_project]
