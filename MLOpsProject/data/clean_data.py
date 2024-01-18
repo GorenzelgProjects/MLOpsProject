@@ -39,7 +39,7 @@ def encode_targets(y):
     return y_encoded
 
 def encode_inputs(X, object_cols):
-    ohe = OneHotEncoder(handle_unknown='ignore', sparse=False)
+    ohe = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
     X_encoded = pd.DataFrame(ohe.fit_transform(X[object_cols]))
     X_encoded.columns = ohe.get_feature_names_out(object_cols)
     X_encoded.index = X.index
