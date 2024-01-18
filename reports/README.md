@@ -462,9 +462,9 @@ As mentioned above, we did not get to have the most success with this. But what 
 >
 > Answer:
 
-![my_image](figures/bucket1)
-![my_image](figures/bucket2)
-In the google cloud folder our trained model was placed.
+![my_image](figures/bucket1.png)
+![my_image](figures/bucket2.png)
+In the google cloud folder, our trained model was placed.
 
 ### Question 20
 
