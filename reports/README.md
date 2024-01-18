@@ -130,6 +130,7 @@ s190464, s214622, s214649
 > Answer:
 
 We used "Optuna" as our third-party framework in this project. As we've in the past semester had the course "active machine learning" we thought it would be nice to revisit Hyperparameter setting optimization with another framework. We used this GitHub as inspiration for our settings: "https://github.com/elena-ecn/optuna-optimization-for-PyTorch-CNN/blob/main/optuna_optimization.py" and optimized for learning rate, optimizer dropout and experimented with a flexible depth in our FFNN. We especially found the pruning of obvious bad runs quite smart and efficient alongside the general ease of used compared to GPYOpt which we've used earlier and has very poor documentation. Optuna helped us achieve better performance and was much faster, computationally speaking, than we though it would be - An image of what information given from the Optuna sweep about HP and their importance can be found under question 14.
+In future patches of this project, we would like to add more flexibility to the model architecture and make an optimization sweep over the model architecture as well.  
 
 ## Coding environment
 
