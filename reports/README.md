@@ -482,7 +482,7 @@ In the google cloud folder, our trained model was placed.
 >
 > Answer:
 
---- question 21 fill here ---
+We build our images locally on our computers, therefore there is nothing in this history. 
 
 ### Question 22
 
@@ -498,7 +498,7 @@ In the google cloud folder, our trained model was placed.
 >
 > Answer:
 
---- question 22 fill here ---
+We deployed our model locally only. We did try to implement it on the cloud as mentioned before.
 
 ### Question 23
 
