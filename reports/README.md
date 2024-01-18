@@ -160,14 +160,18 @@ $ cd [path_to_requirements.txt]
 $ pip install -r requirements.txt
 ```
 
-Afterwards, the data should be downloaded by doing so.
+After the dependecies from requirements.txt is downloaded, the cs data can be downloaded.
 ```bash
 $ cd MLOpsProject/data
 $ python make_dataset.py
 ```
 
+Lastly, the data will be cleaned, normalized and saved as dataloaders:
+```bash
+$ python clean_data.py
+```
 
-Furthermore, we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
+Furthermore we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
 
 ### Question 5
 
