@@ -7,13 +7,13 @@ files:
 
 params:
   batch_size : 32
-  epochs : 20
+  epochs : 40
   debug_mode : False
-  log_mode : False
+  log_mode : True
 
 optimizer:
    _target_: torch.optim.Adam
-   lr: 0.001
+   lr: 9.6433e-05
     
 loss:
     criterion : "torch.nn.modules.loss.CrossEntropyLoss"
