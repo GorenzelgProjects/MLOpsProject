@@ -160,7 +160,13 @@ $ cd [path_to_project]
 $ pip install -r requirements.txt
 ```
 
-Afterwards, you should be good to go.
+Afterwards, the data should be downloaded by doing so.
+```bash
+$ cd MLOpsProject/data
+$ python make_dataset.py
+```
+
+
 Furthermore, we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
 
 ### Question 5
