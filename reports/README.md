@@ -473,7 +473,7 @@ In the google cloud folder, our trained model was placed.
 >
 > Answer:
 
-![my_image](figures/Container registry.png)
+![my_image](figures/Containerregistry.png)
 
 ### Question 21
 
