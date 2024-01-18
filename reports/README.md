@@ -342,9 +342,9 @@ We added different workflows in the code, such that we in a code/ML-debugging sc
 >
 > Answer:
 
-![my_image](Figures/wandb_main.png)
-![my_image](Figures/wandb_val_loss.png)
-![my_image](Figures/Optuna.png)
+![my_image](figures/wandb_main.png)
+![my_image](figures/wandb_val_loss.png)
+![my_image](figures/Optuna.png)
 
 As seen in the first image, we've tracked the train+validation loss and train+validation accuracy. These two factors explain both sides of a common issue in ML: exploitation vs. exploration or just generalization. The train acc. and loss explains how well the model adapts to the training set and validation acc. and loss explains how well the model generalizes to new data. -> At least that's the idea. As seen in the train loss, we have a continuously falling, relatively smooth curve throughout all the steps. As for the validation loss, we see a more bumpy, yes continuously falling curve. This suggests a few things: firstly the model is learning well in terms of the train set, yet still able to generalize well. We only see a slight overfitting even over 40 epochs. Secondly, we want to use the validation loss to force an early stop if the validation loss stagnates or even rises over a few epochs. This didn't seem necessary over 40 epochs as it was continuously falling, but if we wanted to go for example 100 epochs this should be implemented.
 
