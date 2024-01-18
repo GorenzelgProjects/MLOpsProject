@@ -148,7 +148,7 @@ In future patches of this project, we would like to add more flexibility to the 
 > *complete copy of our development environment, one would have to run the following commands*
 >
 > Answer:
-
+#### Prerequisition
 As a prerequisite, we recommend setting up a virtual environment for this project using Anaconda.
 
 ```bash
