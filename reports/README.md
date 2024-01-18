@@ -218,7 +218,7 @@ The main part of the folder are [...].
 >
 > Answer:
 
-Add that we used pep8 and linting [...].
+We did try to abide to pep8 coding format, but we ended up with a somewhat altered version, yet we did abide to a set of rules between us for code quality and format, which we believe ended up being quite nice.
 
 Throughout this project work and other projects, we've noticed the importance of using git to share code that makes for small parts in a greater whole in the project. This means that no one person has the full picture of over details in the code without reading and understanding other's code. Rules like pep8 and just good coding practices in general enhance readability, thereby hastening and improving the quality overall in the project.
 
