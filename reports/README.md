@@ -181,6 +181,9 @@ And be used for prediction with:
 $ python predict.py
 ```
 Both .py files contains args that can be parsed, use --help for more info.
+```bash
+$ python train.py --help
+```
 
 ### Docker
 Furthermore we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
