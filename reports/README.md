@@ -158,11 +158,12 @@ $ conda activate [your_environment_name]
 !!!!!!!!!!!!!!!!!!!!!!!!!!!
 Der skal skrives noget her
 !!!!!!!!!!!!!!!!!!!!!!!!!!
-We have made a requirements.txt file in which we have stated all the libraries and packages. This file is used for a new member of the time to set up the right environment.
-The way the member can do this is by:
-1. $cd [path]
-2. $pip install -r requirements.txt
-   
+A requirements.txt file has been made in which we have stated all the libraries and packages.
+```bash
+$ cd [path_to_project]
+$ pip install -r requirements.txt
+```
+
 Afterwards, you should be good to go.
 Furthermore, we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
 
