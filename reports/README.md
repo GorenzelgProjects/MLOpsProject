@@ -328,7 +328,7 @@ test_model_structure.py test the structure of our code.
 > Answer:
 
 We mainly used Hydra to configure our experiments, which has all its parameter settings in a config file and saves all important experiment data in an output folder with timestamps.
-As an addition, we've also made a "click"-library-based file for command line training and prediction, where one can input settings directly into the command line.
+As an addition, we've also made a "click"-library-based file for command line training and prediction, where one can input settings directly into the command line. Question 4 showcases some of these command-line coding examples for running experiments.
 
 ### Question 13
 
