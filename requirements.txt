@@ -11,6 +11,10 @@ fastapi
 pydantic
 watchfiles
 dvc
+"dvc[gdrive]"
 Flask
 requests
 jsonify
+googledrivedownloader
+optuna
+pytest
