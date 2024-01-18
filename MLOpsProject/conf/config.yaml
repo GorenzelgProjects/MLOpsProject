@@ -16,7 +16,7 @@ optimizer:
    lr: 0.001
     
 loss:
-    criterion : "torch.nn.modules.loss.BCELoss"
+    criterion : "torch.nn.modules.loss.CrossEntropyLoss"
 
 model:
   model : models.model
