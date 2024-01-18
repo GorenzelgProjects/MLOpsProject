@@ -172,6 +172,10 @@ $ python clean_data.py
 ```
 
 Furthermore we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
+```bash
+$ docker build -f train_model.dockerfile . -t trainer:latest
+$ docker build -f predict_model.dockerfile . -t trainer:latest
+```
 
 ### Question 5
 
