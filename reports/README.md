@@ -180,7 +180,7 @@ And be used for prediction with:
 ```bash
 $ python predict.py
 ```
-Both .py files contains args that can be parsed, use --help for more info.
+Both train & predict files contains args that can be parsed, use --help for more info.
 ```bash
 $ python train.py --help
 ```
