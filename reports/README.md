@@ -156,12 +156,22 @@ $ conda activate [your_environment_name]
 ```
 A requirements.txt file has been made in which we have stated all the libraries and packages.
 ```bash
-$ cd [path_to_project]
+$ cd [path_to_requirements.txt]
 $ pip install -r requirements.txt
 ```
 
-Afterwards, you should be good to go.
-Furthermore, we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
+After the dependecies from requirements.txt is downloaded, the cs data can be downloaded.
+```bash
+$ cd MLOpsProject/data
+$ python make_dataset.py
+```
+
+Lastly, the data will be cleaned, normalized and saved as dataloaders:
+```bash
+$ python clean_data.py
+```
+
+Furthermore we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
 
 ### Question 5
 
