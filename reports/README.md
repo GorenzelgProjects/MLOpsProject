@@ -183,6 +183,7 @@ $ python predict.py
 Both train & predict files contains args that can be parsed, use --help for more info.
 ```bash
 $ python train.py --help
+$ python predict.py --help
 ```
 
 ### Docker
