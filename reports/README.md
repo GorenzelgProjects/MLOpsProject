@@ -254,7 +254,7 @@ The main idea was to make tests for train, model architecture and data, as these
 >
 > Answer:
 
-Our code coverage is [...] ....
+Our code coverage is 17 % (But most of the important/main files had a coverage of 80-100 %)
 
 We think that unit-testing and thereby test-coverage in important to check for problems that might arise when growing/changing the project. But as most ML, especially DL is largely dynamic, the errors can also be very abstract. It's easy to make tests for tensor-sizes and data cleaning functions, as the answer to these tests are obvious. The real issue arises when ones loss is acting out or the accuracy suddenly is much lower after a change that even went through the tests. In this project we even had issues with data and models even at a simple FFNN - The solution was much more abstract than a simple unittest is able to handle. Therefore in ML we cannot trust test to makes us error-free, but it helps in certain areas.
 
