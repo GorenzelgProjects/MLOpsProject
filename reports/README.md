@@ -50,36 +50,36 @@ end of the project.
 
 ### Week 1
 
-* [ ] Create a git repository
-* [ ] Make sure that all team members have write access to the github repository
-* [ ] Create a dedicated environment for you project to keep track of your packages
-* [ ] Create the initial file structure using cookiecutter
-* [ ] Fill out the `make_dataset.py` file such that it downloads whatever data you need and
-* [ ] Add a model file and a training script and get that running
+* [x] Create a git repository
+* [x] Make sure that all team members have write access to the github repository
+* [x] Create a dedicated environment for you project to keep track of your packages
+* [x] Create the initial file structure using cookiecutter
+* [x] Fill out the `make_dataset.py` file such that it downloads whatever data you need and
+* [x] Add a model file and a training script and get that running
 * [ ] Remember to fill out the `requirements.txt` file with whatever dependencies that you are using
-* [ ] Remember to comply with good coding practices (`pep8`) while doing the project
-* [ ] Do a bit of code typing and remember to document essential parts of your code
+* [x] Remember to comply with good coding practices (`pep8`) while doing the project
+* [x] Do a bit of code typing and remember to document essential parts of your code
 * [ ] Setup version control for your data or part of your data
-* [ ] Construct one or multiple docker files for your code
-* [ ] Build the docker files locally and make sure they work as intended
-* [ ] Write one or multiple configurations files for your experiments
-* [ ] Used Hydra to load the configurations and manage your hyperparameters
+* [x] Construct one or multiple docker files for your code
+* [x] Build the docker files locally and make sure they work as intended
+* [x] Write one or multiple configurations files for your experiments
+* [x] Used Hydra to load the configurations and manage your hyperparameters
 * [ ] When you have something that works somewhat, remember at some point to to some profiling and see if
       you can optimize your code
-* [ ] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
+* [x] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
       consider running a hyperparameter optimization sweep.
 * [ ] Use Pytorch-lightning (if applicable) to reduce the amount of boilerplate in your code
 
 ### Week 2
 
-* [ ] Write unit tests related to the data part of your code
-* [ ] Write unit tests related to model construction and or model training
-* [ ] Calculate the coverage.
-* [ ] Get some continuous integration running on the github repository
-* [ ] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
+* [x] Write unit tests related to the data part of your code
+* [x] Write unit tests related to model construction and or model training
+* [x] Calculate the coverage.
+* [x] Get some continuous integration running on the github repository
+* [x] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
 * [ ] Create a trigger workflow for automatically building your docker images
 * [ ] Get your model training in GCP using either the Engine or Vertex AI
-* [ ] Create a FastAPI application that can do inference using your model
+* [x] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
 * [ ] Deploy your model in GCP using either Functions or Run as the backend
 
@@ -90,7 +90,7 @@ end of the project.
 * [ ] Setup monitoring for the performance of your deployed model
 * [ ] If applicable, play around with distributed data loading
 * [ ] If applicable, play around with distributed model training
-* [ ] Play around with quantization, compilation and pruning for you trained models to increase inference speed
+* [x] Play around with quantization, compilation and pruning for you trained models to increase inference speed
 
 ### Additional
 
@@ -129,7 +129,7 @@ s190464, s214622, s214649
 >
 > Answer:
 
---- question 3 fill here ---
+We used "Optuna" as our third-party framework in this project. As we've in the past semester had the course "active machine learning" we thought it would be nice to revisit Hyperparameter setting optimization with another framework. We used this GitHub as inspiration for our settings: "https://github.com/elena-ecn/optuna-optimization-for-PyTorch-CNN/blob/main/optuna_optimization.py" and optimized for learning rate, optimizer dropout and experimented with a flexible depth in our FFNN. We especially found the pruning of obvious bad runs quite smart and efficient alongside the general ease of used compared to GPYOpt which we've used earlier and has very poor documentation. Optuna helped us achieve better performance and was much faster, computationally speaking, than we though it would be.
 
 ## Coding environment
 
@@ -148,15 +148,20 @@ s190464, s214622, s214649
 >
 > Answer:
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Der skal skrives noget her
-!!!!!!!!!!!!!!!!!!!!!!!!!!
-We have made a requirements.txt file in which we have stated all the libraries and packages. This file is used for a new member of the time to set up the right environment.
-The way the member can do this is by:
-1. $cd [path]
-2. $pip install -r requirements.txt
-   
-Afterwards you should be good to go.
+As a prerequisite, we recommend setting up a virtual environment for this project using Anaconda.
+
+```bash
+$ conda create --name [your_environment_name] python=3.9
+$ conda activate [your_environment_name] 
+```
+A requirements.txt file has been made in which we have stated all the libraries and packages.
+```bash
+$ cd [path_to_project]
+$ pip install -r requirements.txt
+```
+
+Afterwards, you should be good to go.
+Furthermore, we've made a docker file, which builds an exact image of the project and can run both the training- and predict files.
 
 ### Question 5
 
@@ -292,7 +297,8 @@ test_model_structure.py test the structure of our code.
 >
 > Answer:
 
---- question 12 fill here ---
+We mainly used Hydra to configure our experiments, which has all its parameter settings in a config file and saves all important experiment data in an output folder with timestamps.
+As an addition, we've also made a "click"-library-based file for command line training and prediction, where one can input settings directly into the command line.
 
 ### Question 13
 
@@ -341,7 +347,9 @@ We added different workflows in the code, such that we in a code/ML-debugging sc
 >
 > Answer:
 
---- question 15 fill here ---
+Docker has also been a focus of interest in our project, both on its own, but also to use alongside our API and Google Cloud implementation. Separately we used two docker images: one for training and one for inference. We mostly ran the images out of the box, but it is possible to change hyperparameter settings by changing the Hydra config file. Link to training file "https://github.com/GorenzelgProjects/MLOpsProject/blob/main/train_model.dockerfile".
+Furthermore, we used docker images for our API deployment, as this would make sure we could run our solution on any PC, just by running the docker file.
+Lastly, we also used a docker image for our Google Cloud setup.
 
 ### Question 16
 
@@ -356,8 +364,8 @@ We added different workflows in the code, such that we in a code/ML-debugging sc
 >
 > Answer:
 
-In our project, we used Visual Studio Codes debugger, which helped a lot in getting our project to work. We found this technique to be very improving for the time used on debugging plus efficient code checking (run sub-parts of the code).
-Already in the early project days, we tried using profiling which gave little result, because of errors in code...
+In our project, we used Visual Studio Codes debugger, which helped a lot in getting our project to work. We found this technique to be very time-efficient for debugging plus efficient code checking (run sub-parts of the code). Using the breakpoint function and debugger console allows us to move beyond print-statements and we found this very efficient. However, the debugger tool still works best for "old-school" code problems, whereas other tools like plots and shape prints are still necessary for ML issues/bugs debugging.
+Already in the early project days, we focused on implementing profiling to see which parts of the code were slow. This helped us speed up the code, as we now had a better idea if where we could improve the most.
 
 ## Working in the cloud
 
@@ -482,7 +490,7 @@ Already in the early project days, we tried using profiling which gave little re
 >
 > Answer:
 
---- question 25 fill here ---
+Lav figure først [...]
 
 ### Question 26
 
@@ -496,8 +504,9 @@ Already in the early project days, we tried using profiling which gave little re
 >
 > Answer:
 
-Throughout the process, we had different challenges. Firstly, we had the program itself running in the template, which took some time to get running probably with Hydra.
-Secondly, we had the Google Cloud issue which took a huge amount of time working. To solve the first problem we had to look through several videos on YouTube and experiment with code
+Throughout the process, we had different challenges. Firstly, we had program issues with our model to work on our data. This needed a mixture of debugging, profiling, and wandb to solve it. Debugging helped with issues regarding folder layout giving data-loading issues, profiling to speed up very slow parts of the code, and wandb+shape-print-statements to fix model issues. Hydra also gave us issues with config files in the training loop, but in the end, the tools we've gotten both before this course and throughout it helped us overcome most of the local deployment issues and made for a good ground for reproducible experiments 
+
+Secondly, we had the Google Cloud issue (surprise, surprise) which took a huge amount of time working. To solve the first problem we had to look through several videos on YouTube and experiment with code
 before it worked. For the second problem, we searched through the internet/YouTube to solve it, and it seemed to be a huge struggle in the beginning. The first couple of steps was fine in which we mean creating
 a project and activating API and bucket. But from there it was time-consuming.
 
