@@ -311,6 +311,9 @@ like do we remove all grenades from the dataset. The first one tests all the dat
 test_model_structure.py test the structure of our code. 
 
 We've then added these Pytests to GitHub Actions, such that they will run on every pull request merge and any main branch push. This has helped is tremendously in finding bugs throughout evolving the project, writing more code, rewriting code, etc. We've caught quite a few bugs that would otherwise how taken time through the debugger and were in this way quite easy to solve, as we already knew the exact location by looking through the logs. 
+
+The GitHub Action tests-run can be found here: "https://github.com/GorenzelgProjects/MLOpsProject/actions/workflows/ci.yaml".
+
 We did however not evolve our pytests as much as we would have liked throughout the project. We added tests model, data, and training as we though these were bare-minimums but as the project grew, we would have liked to have had the time to implement even more. - In further patches of this project or other projects, we will prioritize implementing more CI, as we have been able to see the benefits hereof. - Even though it can be tedious to set it all up, once it's running, it can save one a lot of time.
 
 
