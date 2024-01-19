@@ -1,10 +1,10 @@
-FROM python:latest
+FROM python:3.9-slim
 
 # set the working directory
 WORKDIR /app
 
 # install dependencies
-COPY ./requirements.txt /app
+COPY ./API/requirements.txt /app
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 # copy the scripts to the folder

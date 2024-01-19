@@ -31,8 +31,8 @@ def read_root() -> Response:
     return Response("The server is running.")
 
 
-@app.get("/channels/{channel_id}", response_model=Channel)
-def read_item(channel_id: str) -> Channel:
+@app.get("/channels/{channel_id}", response_model=str)
+def read_item(channel_id: str) -> str:
     if channel_id not in channels:
         raise HTTPException(status_code=404, detail="Channel not found")
     else:
@@ -85,10 +85,7 @@ def read_item(channel_id: str) -> Channel:
 
         predicted = predict(model_path,dataloader)
         print(predicted)
-        if predicted[0].argmax().item() == 0:
-            win_id = "ct_win"
-        else:
-            win_id = "t_win"
+        winner_dict = {0: 'CT', 1: 'T'}
+        result = "Predicted winner: {} with probability: {}%".format(winner_dict[predicted[0].argmax().item()], round(predicted[0].max().item()*100,2))
 
-    return channels[win_id]
-
+    return result

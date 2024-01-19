@@ -4,17 +4,5 @@
         "name": "WHO WILL WIN",
         "tags": ["web development", "typescript"],
         "description": "Finding out who will win the round"
-    },
-    {
-        "id": "ct_win",
-        "name": "CS WIN",
-        "tags": ["web development", "typescript"],
-        "description": "Counter terrorist will probably win the round"
-    },
-    {
-        "id": "t_win",
-        "name": "T WIN",
-        "tags": ["frontend", "technology"],
-        "description": "Terrorist will probably win the round"
     }
 ]

@@ -59,7 +59,7 @@ class Raw2Clean:
         return y_encoded
 
     def encode_inputs(self, X, object_cols, map_list, bomb_list):
-        ohe = OneHotEncoder(handle_unknown='ignore', sparse=False, categories=[map_list, bomb_list])
+        ohe = OneHotEncoder(handle_unknown='ignore', sparse_output=False, categories=[map_list, bomb_list])
         X_encoded = pd.DataFrame(ohe.fit_transform(X[object_cols]))
         X_encoded.columns = ohe.get_feature_names_out(object_cols)
         X_encoded.index = X.index

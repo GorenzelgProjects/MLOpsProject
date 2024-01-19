@@ -1,4 +1,20 @@
+torch >= 2.1.0
+pandas
+scikit-learn
+hydra-core
+wandb
+numpy
+pytest
+torchvision
+uvicorn
 fastapi
 pydantic
-uvicorn
 watchfiles
+dvc
+dvc[gdrive]
+Flask
+requests
+jsonify
+googledrivedownloader
+optuna
+pytest

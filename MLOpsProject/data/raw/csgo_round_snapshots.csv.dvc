@@ -1,0 +1,5 @@
+outs:
+- md5: 0157b8149562f64cd4000b0d8e950003
+  size: 50410839
+  hash: md5
+  path: csgo_round_snapshots.csv

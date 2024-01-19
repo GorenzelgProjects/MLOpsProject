@@ -33,10 +33,14 @@ def predict(
     
     """Prediction loop of model"""
 
+    if device == "cuda":
+        model = torch.load(model)
+    else:
+        model = torch.load(model, map_location=torch.device('cpu')) 
+
     total = 0
     correct = 0
     all_predictions = []
-    model = torch.load(model)
     model.eval()
     with torch.no_grad():
         for images, labels in dataloader:
