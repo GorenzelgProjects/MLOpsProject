@@ -11,7 +11,7 @@ fastapi
 pydantic
 watchfiles
 dvc
-"dvc[gdrive]"
+dvc[gdrive]
 Flask
 requests
 jsonify

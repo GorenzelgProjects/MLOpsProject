@@ -56,15 +56,15 @@ end of the project.
 * [x] Create the initial file structure using cookiecutter
 * [x] Fill out the `make_dataset.py` file such that it downloads whatever data you need and
 * [x] Add a model file and a training script and get that running
-* [ ] Remember to fill out the `requirements.txt` file with whatever dependencies that you are using
+* [x] Remember to fill out the `requirements.txt` file with whatever dependencies that you are using
 * [x] Remember to comply with good coding practices (`pep8`) while doing the project
 * [x] Do a bit of code typing and remember to document essential parts of your code
-* [ ] Setup version control for your data or part of your data
+* [x] Setup version control for your data or part of your data
 * [x] Construct one or multiple docker files for your code
 * [x] Build the docker files locally and make sure they work as intended
 * [x] Write one or multiple configurations files for your experiments
 * [x] Used Hydra to load the configurations and manage your hyperparameters
-* [ ] When you have something that works somewhat, remember at some point to to some profiling and see if
+* [x] When you have something that works somewhat, remember at some point to to some profiling and see if
       you can optimize your code
 * [x] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
       consider running a hyperparameter optimization sweep.
@@ -88,14 +88,14 @@ end of the project.
 * [ ] Check how robust your model is towards data drifting
 * [ ] Setup monitoring for the system telemetry of your deployed model
 * [ ] Setup monitoring for the performance of your deployed model
-* [ ] If applicable, play around with distributed data loading
+* [x] If applicable, play around with distributed data loading
 * [ ] If applicable, play around with distributed model training
 * [x] Play around with quantization, compilation and pruning for you trained models to increase inference speed
 
 ### Additional
 
-* [ ] Revisit your initial project description. Did the project turn out as you wanted?
-* [ ] Make sure all group members have a understanding about all parts of the project
+* [x] Revisit your initial project description. Did the project turn out as you wanted?
+* [x] Make sure all group members have a understanding about all parts of the project
 * [ ] Uploaded all your code to github
 
 ## Group information
@@ -206,8 +206,12 @@ $ docker build -f predict_model.dockerfile . -t trainer:latest
 > *experiments.*
 > Answer:
 
-We used the cookiecutter template given in the course. It was important for us to keep the structure of the template to force us to work in a more structured manner - We then removed the following folders at the end, due to the fact we did not implement these parts in the project [...].
-The main part of the folder are [...].
+We used the cookiecutter template given in the course. It was important for us to keep the structure of the template to force us to work in a more structured manner - We then removed the following folders at the end: The data and models in the outermost folder, as we found it more logical to have all of the things related to the model inside the "MLOpsProject" folder - Furthermore, it was also an issue with relative paths to have two folders of the same name. We also chose to remove the docker folder, as we had the docker files in the outermost folder, as we thought it would be better for reproducibility reasons. 
+In the main folder, "MLOpsProject" we have everything related to models, data, training, API, and cloud. Every one of these has its folder and the main files for training etc. are in the outer-most folder, as these are the actual .py files that will be run, whereas the folder is files behind the scenes - For example imports, data, pytests etc.
+
+
+In question 4, we've described how to set up the main files and run them, which explains the general usage of our project. If one would like to go in-depth with understanding or altering more complex or intecrit parts of the project, most of the "behind the scenes" files have comments explaining the general usage of the project.
+Such, we believe that the structure layering of the project is suitable, as the complexity rises and more ML knowledge is needed to alter or understand, the deeper into the folders one has to go. - In other words: The steering of the project is relatively guided, hiding away the engine room, though it's still available to the more experienced mechanic if needed, alongside a manual.
 
 ### Question 6
 
@@ -239,7 +243,7 @@ Throughout this project work and other projects, we've noticed the importance of
 >
 > Answer:
 
-The main idea was to make tests for train, model architecture and data, as these parts was changed the most throughout the project, making it important to test often. We made a total of [...] that tested [...]. We then used the "Coverage" library to check over coverage and reiterated our testing, both in general but also as our project grew in size.
+The main idea was to make tests for train, model architecture and data, as these parts was changed the most throughout the project, making it important to test often. We made a total of 7 tests that tested the clean_data.py and model.py. We then used the "Coverage" library to check over coverage and reiterated our testing, both in general but also as our project grew in size.
 
 ### Question 8
 
@@ -254,7 +258,7 @@ The main idea was to make tests for train, model architecture and data, as these
 >
 > Answer:
 
-Our code coverage is [...] ....
+Our code coverage is 17 % (But most of the important/main files had a coverage of 80-100 %)
 
 We think that unit-testing and thereby test-coverage in important to check for problems that might arise when growing/changing the project. But as most ML, especially DL is largely dynamic, the errors can also be very abstract. It's easy to make tests for tensor-sizes and data cleaning functions, as the answer to these tests are obvious. The real issue arises when ones loss is acting out or the accuracy suddenly is much lower after a change that even went through the tests. In this project we even had issues with data and models even at a simple FFNN - The solution was much more abstract than a simple unittest is able to handle. Therefore in ML we cannot trust test to makes us error-free, but it helps in certain areas.
 
@@ -464,7 +468,7 @@ As mentioned above, we did not get to have the most success with this. But what 
 
 ![my_image](figures/bucket1.png)
 ![my_image](figures/bucket2.png)
-In the google cloud folder, our trained model was placed.
+Our trained model is placed in the Google cloud folder.
 
 ### Question 20
 
@@ -473,6 +477,7 @@ In the google cloud folder, our trained model was placed.
 >
 > Answer:
 
+We tried a lot with different settings and versions. We should probably have sorted this part a bit more. Inside the different folders are the images we created.
 ![my_image](figures/Containerregistry.png)
 
 ### Question 21
@@ -514,7 +519,11 @@ We succeeded in deploying our model locally. To achieve this, we built a Docker 
 >
 > Answer:
 
---- question 23 fill here ---
+As mentioned before we didn't succeed in deploying our model, but monitoring of deployed model is important, here is why:
+
+Firstly, it helps to monitor the actual performance of a deployed model over time. This can be given in a lot of different ways as matrices and so on. Secondly, it makes it easier for us to control the data, which are going through the model. It could be cases of data drifting or something unusual/outliers, which should be dealt with. In our case data drifting would certainly happen, as with game updates, the data would change over a period and we would expect to gather new data and retrain at at least every patch. Thirdly, there is the hardware part of training a model, like how is the memory usage and tracks CPU/GPU. 
+
+Due to these opportunities, it would have been nice to have and we could see if our model was deployed to the cloud that this should be a fundamental part of us using the cloud.
 
 ### Question 24
 
@@ -528,7 +537,7 @@ We succeeded in deploying our model locally. To achieve this, we built a Docker 
 >
 > Answer:
 
---- question 24 fill here ---
+In total, we used 240 kr. which was given in the free trial version. This was mainly tried one computer, therefore it is only one of us there used that. If we had implemented our model in the cloud and scaled up, as we wanted, it would have cost a lot more. 
 
 ## Overall discussion of project
 
