@@ -292,7 +292,9 @@ The pull request feature was quite brilliant, as we suddenly saw zero merging is
 >
 > Answer:
 
-Initially we didn't use it due to [...], but [...].
+We initially developed a simple version where data could be retrieved and examined using Google Drive. This proved to be a sensible decision as, during the initial process, our data was overwritten, thus allowing us to have an easy and original version that could be restored. By doing so we also made troubleshooting a bit easier. Subsequently, a Data Version Control (DVC) Pull/Push call was implemented to Google Drive with tags, enabling further examination of versions before any download.
+
+On a more general level, errors like ours and more critical issues can be avoided by using DVC services. Data Version Control also strengthens big data flow and ensures the quality of data concerning auto-updates.
 
 ### Question 11
 
@@ -562,9 +564,15 @@ In total, we used 240 kr. which was given in the free trial version. This was ma
 >
 > Answer:
 
-Lav figure først [...]
+![my_image](figures/overall.png)
 
-When it comes to the cloud part of the picture, we would have liked to use our model on Vertex AI. This would make it possible for us to run it on some hardware, that we do not necessarily have available. This model should of cause collect the data from Google Drev into a bucket in Cloud. In this way, we could do ML on the cloud.
+The starting point of the diagram is our local setup, where we integrated a Pytorch Feedforward Neural Network (FFNN) application for predicting Counter-Strike round winners. This application is optimized and controlled using HYDRA, Optuna, and Wandb. Additionally, we have a Fast API user interface named "main," and the local deployment is encapsulated within a Docker Image, providing the capability for both training and prediction.
+
+To manage dependencies, we utilize Anaconda Prompt for efficient pip install operations. Simultaneously, we integrate Git commands, such as git push and git pull, to synchronize our local codebase with the GitHub repository. Furthermore, we incorporate Data Version Control (DVC) to handle data versioning, utilizing dvc pull and dvc push to interact with a Google Drive storage for seamless collaboration and version control.
+
+Whenever code is committed and pushed to GitHub, it triggers GitHub Actions, a part of our GitHub setup. This includes profiling and debugging tools such as Pytest and cProfile. The GitHub Actions automate various processes, ensuring code quality and reliability in our version control system.
+
+When it comes to the cloud part of the diagram, we would have liked to use our model on Vertex AI. This would make it possible for us to run it on some hardware, that we do not necessarily have available. This model should of cause collect the data from Google Drev into a bucket in Cloud. In this way, we could do ML on the cloud.
 
 As a starting point, we would have used the Google Clouds Run function to run some of the images we created early on in the process. Where the images were stored in the Container registry. This could then give us ensure about whether our model would work in this way of handling it or not.
 
