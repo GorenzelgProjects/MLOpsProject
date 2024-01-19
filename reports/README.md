@@ -77,7 +77,7 @@ end of the project.
 * [x] Calculate the coverage.
 * [x] Get some continuous integration running on the github repository
 * [x] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
-* [ ] Create a trigger workflow for automatically building your docker images
+* [x] Create a trigger workflow for automatically building your docker images
 * [ ] Get your model training in GCP using either the Engine or Vertex AI
 * [x] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
@@ -89,7 +89,7 @@ end of the project.
 * [ ] Setup monitoring for the system telemetry of your deployed model
 * [ ] Setup monitoring for the performance of your deployed model
 * [x] If applicable, play around with distributed data loading
-* [ ] If applicable, play around with distributed model training
+* [x] If applicable, play around with distributed model training
 * [x] Play around with quantization, compilation and pruning for you trained models to increase inference speed
 
 ### Additional
