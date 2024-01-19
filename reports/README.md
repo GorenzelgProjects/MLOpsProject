@@ -148,6 +148,10 @@ In future patches of this project, we would like to add more flexibility to the 
 > *complete copy of our development environment, one would have to run the following commands*
 >
 > Answer:
+
+Below we've described how to set up the main files and run them, which explains the general usage of our project. If one would like to go in-depth with understanding or altering more complex or intecrit parts of the project, most of the "behind the scenes" files have comments explaining the general usage of the project.
+Such, we believe that the structure layering of the project is suitable, as the complexity rises and more ML knowledge is needed to alter or understand, the deeper into the folders one has to go. - In other words: The steering of the project is relatively guided, hiding away the engine room, though it's still available to the more experienced mechanic if needed, alongside a manual.
+
 ### Prerequisition
 As a prerequisite, we recommend setting up a virtual environment for this project using Anaconda.
 
@@ -210,9 +214,6 @@ We used the cookiecutter template given in the course. It was important for us t
 In the main folder, "MLOpsProject" we have everything related to models, data, training, API, and cloud. Every one of these has its folder and the main files for training etc. are in the outer-most folder, as these are the actual .py files that will be run, whereas the folder is files behind the scenes - For example imports, data, pytests etc.
 
 
-In question 4, we've described how to set up the main files and run them, which explains the general usage of our project. If one would like to go in-depth with understanding or altering more complex or intecrit parts of the project, most of the "behind the scenes" files have comments explaining the general usage of the project.
-Such, we believe that the structure layering of the project is suitable, as the complexity rises and more ML knowledge is needed to alter or understand, the deeper into the folders one has to go. - In other words: The steering of the project is relatively guided, hiding away the engine room, though it's still available to the more experienced mechanic if needed, alongside a manual.
-
 ### Question 6
 
 > **Did you implement any rules for code quality and format? Additionally, explain with your own words why these**
@@ -224,7 +225,7 @@ Such, we believe that the structure layering of the project is suitable, as the 
 
 We did try to abide to pep8 coding format, but we ended up with a somewhat altered version, yet we did abide to a set of rules between us for code quality and format, which we believe ended up being quite nice.
 
-Throughout this project work and other projects, we've noticed the importance of using git to share code that makes for small parts in a greater whole in the project. This means that no one person has the full picture of over details in the code without reading and understanding other's code. Rules like pep8 and just good coding practices in general enhance readability, thereby hastening and improving the quality overall in the project.
+Throughout this project work and other projects, we've noticed the importance of using git to share code that makes for small parts in a greater whole in the project. This means that no one person has the full picture of over details in the code without reading and understanding other's code.
 
 ## Version control
 
@@ -459,7 +460,7 @@ Vertex AI: This is a place where it is possible to quickly get an AI model and p
 >
 > Answer:
 
-As mentioned above, we did not get to have the most success with this. But what we did was to build out docker images on our computers, which were pushed to the cloud. On the cloud, we tried to build up an instance to run this with VMs. For experiment purposes, we used the minimal hardware available to us. Of course, we had made a custom container for this. That should be said, we did spend a long time on this and we should probably have allocated more time to this because it is a hard topic.
+As mentioned in Question 18, we did not get to have success with having a working implementation, but we did however build out docker images on our computers, which were pushed to the cloud. On the cloud, we tried to build up an instance to run this with VMs. For experiment purposes, we used the minimal hardware available to us. Of course, we had made a custom container for this. That should be said, we did spend a long time on this and we should probably have allocated even more time to this, as we found this topic harder than anticipated (even after Nicki's warning in class).
 
 ### Question 19
 
@@ -588,9 +589,7 @@ The overarching idea of allowing users to automatically upload log files, make a
 
 Throughout the process, we had different challenges. Firstly, we had program issues with our model to work on our data. This needed a mixture of debugging, profiling, and wandb to solve it. Debugging helped with issues regarding folder layout giving data-loading issues, profiling to speed up very slow parts of the code, and wandb+shape-print-statements to fix model issues. Hydra also gave us issues with config files in the training loop, but in the end, the tools we've gotten both before this course and throughout it helped us overcome most of the local deployment issues and made for a good ground for reproducible experiments 
 
-Secondly, we had the Google Cloud issue (surprise, surprise) which took a huge amount of time working. To solve the first problem we had to look through several videos on YouTube and experiment with code
-before it worked. For the second problem, we searched through the internet/YouTube to solve it, and it seemed to be a huge struggle in the beginning. The first couple of steps was fine in which we mean creating
-a project and activating API and bucket. But from there it was time-consuming.
+Secondly, we had the Google Cloud issue (surprise, surprise) which took a huge amount of time working. To solve the first problem we had to look through several videos on YouTube and experiment with code before it worked. For the second problem, we searched through the internet/YouTube to solve it, and it seemed to be a huge struggle in the beginning. The first couple of steps was fine in which we mean creating a project and activating API and bucket. But from there it was time-consuming to debug through the cloud - As explained in the Cloud questions, we should have allocated even more time for this part.
 
 ### Question 27
 
