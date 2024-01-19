@@ -464,7 +464,7 @@ As mentioned above, we did not get to have the most success with this. But what 
 
 ![my_image](figures/bucket1.png)
 ![my_image](figures/bucket2.png)
-In the google cloud folder, our trained model was placed.
+Our trained model is placed in the Google cloud folder.
 
 ### Question 20
 
@@ -473,6 +473,7 @@ In the google cloud folder, our trained model was placed.
 >
 > Answer:
 
+We tried a lot with different settings and versions. We should probably have sorted this part a bit more. Inside the different folders are the images we created.
 ![my_image](figures/Containerregistry.png)
 
 ### Question 21
