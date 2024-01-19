@@ -239,7 +239,7 @@ Throughout this project work and other projects, we've noticed the importance of
 >
 > Answer:
 
-The main idea was to make tests for train, model architecture and data, as these parts was changed the most throughout the project, making it important to test often. We made a total of [...] that tested [...]. We then used the "Coverage" library to check over coverage and reiterated our testing, both in general but also as our project grew in size.
+The main idea was to make tests for train, model architecture and data, as these parts was changed the most throughout the project, making it important to test often. We made a total of 7 tests that tested the clean_data.py and model.py. We then used the "Coverage" library to check over coverage and reiterated our testing, both in general but also as our project grew in size.
 
 ### Question 8
 
