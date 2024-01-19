@@ -572,9 +572,7 @@ To manage dependencies, we utilize Anaconda Prompt for efficient pip install ope
 
 Whenever code is committed and pushed to GitHub, it triggers GitHub Actions, a part of our GitHub setup. This includes profiling and debugging tools such as Pytest and cProfile. The GitHub Actions automate various processes, ensuring code quality and reliability in our version control system.
 
-When it comes to the cloud part of the diagram, we would have liked to use our model on Vertex AI. This would make it possible for us to run it on some hardware, that we do not necessarily have available. This model should of cause collect the data from Google Drev into a bucket in Cloud. In this way, we could do ML on the cloud.
-
-As a starting point, we would have used the Google Clouds Run function to run some of the images we created early on in the process. Where the images were stored in the Container registry. This could then give us ensure about whether our model would work in this way of handling it or not.
+The overarching idea of allowing users to automatically upload log files, make an API request, and receive real-time recommendations could be realized through the use of Google Cloud products if further development time was available. As a starting point, we would have used the Google Clouds Run function to run some of the Google Images we created early on in the process. Where the Images were stored in the Container registry. This could then give us ensure about whether our model would work in this way of handling it or not. We would also have liked to use our model on Vertex AI for cloud based ML. This would have made it possible for us to run it on some hardware, that we do not necessarily have available. Furthermore, we would have liked to utilize a solution involving Google Cloud Bucket and integrated the data into the cloud environment.
 
 ### Question 26
 
