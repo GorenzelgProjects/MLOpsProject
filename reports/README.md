@@ -506,7 +506,9 @@ On Google Cloud you can upload source code from a computer. From the code, Googl
 > Answer:
 
 
-We succeeded in deploying our model locally. To achieve this, we built a Docker image around our main file, utilizing Fast API as our web framework. The main concept is that users can interact with a trained model, providing inputs about information for a Counter-Strike round, and the model will then return a prediction based on the user's input on who will win the round. However we did try to implement it on the cloud as mentioned before.
+We succeeded in deploying our model locally. To achieve this, we built a Docker image around our main file, utilizing Fast API as our web framework. The main concept is that users can interact with a trained model, providing inputs about information for a Counter-Strike round, and the model will then return a prediction based on the user's input on who will win the round. However, we did try to implement it on the cloud as mentioned before.
+
+Ideally, we would have liked to have a functioning application running on Google Cloud because we then could have scaled our training a lot. Furthermore, if we had access to a larger database of those .csv files, we could have used the storage function to easily store it and then used it to train. This model could then have been trained on a much faster GPU, which means something when training on huge datasets.  
 
 ### Question 23
 
@@ -561,6 +563,10 @@ In total, we used 240 kr. which was given in the free trial version. This was ma
 > Answer:
 
 Lav figure først [...]
+
+When it comes to the cloud part of the picture, we would have liked to use our model on Vertex AI. This would make it possible for us to run it on some hardware, that we do not necessarily have available. This model should of cause collect the data from Google Drev into a bucket in Cloud. In this way, we could do ML on the cloud.
+
+As a starting point, we would have used the Google Clouds Run function to run some of the images we created early on in the process. Where the images were stored in the Container registry. This could then give us ensure about whether our model would work in this way of handling it or not.
 
 ### Question 26
 
