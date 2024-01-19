@@ -208,6 +208,8 @@ $ docker build -f predict_model.dockerfile . -t trainer:latest
 
 We used the cookiecutter template given in the course. It was important for us to keep the structure of the template to force us to work in a more structured manner - We then removed the following folders at the end: The data and models in the outermost folder, as we found it more logical to have all of the things related to the model inside the "MLOpsProject" folder - Furthermore, it was also an issue with relative paths to have two folders of the same name. We also chose to remove the docker folder, as we had the docker files in the outermost folder, as we thought it would be better for reproducibility reasons. 
 In the main folder, "MLOpsProject" we have everything related to models, data, training, API, and cloud. Every one of these has its folder and the main files for training etc. are in the outer-most folder, as these are the actual .py files that will be run, whereas the folder is files behind the scenes - For example imports, data, pytests etc.
+
+
 In question 4, we've described how to set up the main files and run them, which explains the general usage of our project. If one would like to go in-depth with understanding or altering more complex or intecrit parts of the project, most of the "behind the scenes" files have comments explaining the general usage of the project.
 Such, we believe that the structure layering of the project is suitable, as the complexity rises and more ML knowledge is needed to alter or understand, the deeper into the folders one has to go. - In other words: The steering of the project is relatively guided, hiding away the engine room, though it's still available to the more experienced mechanic if needed, alongside a manual.
 
