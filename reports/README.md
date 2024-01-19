@@ -533,7 +533,7 @@ Due to these opportunities, it would have been nice to have and we could see if 
 >
 > Answer:
 
---- question 24 fill here ---
+In total, we used 240 kr. which was given in the free trial version. This was mainly tried one computer, therefore it is only one of us there used that. If we had implemented our model in the cloud and scaled up, as we wanted, it would have cost a lot more. 
 
 ## Overall discussion of project
 
