@@ -566,7 +566,7 @@ In total, we used 240 kr. which was given in the free trial version. This was ma
 
 ![my_image](figures/overall.png)
 
-The starting point of the diagram is our local setup, where we integrated a Pytorch Feedforward Neural Network (FFNN) application for predicting Counter-Strike round winners. This application is optimized and controlled using HYDRA, Optuna, and Wandb. Additionally, we have a Fast API user interface named "main," and the local deployment is encapsulated within a Docker Image, providing the capability for training, prediction, and API calls.
+The starting point of the diagram is our local setup, where we integrated a Pytorch Feedforward Neural Network (FFNN) application for predicting Counter-Strike round winners. This application is controlled, optimized, and logged respectivly using HYDRA, Optuna, and Wandb. Additionally, we have a Fast API user interface named "main," and the local deployment is encapsulated within a Docker Image, providing the capability for training, prediction, and API calls.
 
 To manage dependencies, we utilize Anaconda Prompt for efficient pip install operations. Simultaneously, we integrate Git commands, such as git push and git pull, to synchronize our local codebase with the GitHub repository. Furthermore, we incorporate Data Version Control (DVC) to handle data versioning, utilizing dvc pull and dvc push to interact with a Google Drive storage for seamless collaboration and version control.
 
