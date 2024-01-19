@@ -515,7 +515,11 @@ We succeeded in deploying our model locally. To achieve this, we built a Docker 
 >
 > Answer:
 
---- question 23 fill here ---
+As mentioned before we didn't succeed in deploying our model, but monitoring of deployed model is important, here is why:
+
+Firstly, it helps to monitor the actual performance of a deployed model over time. This can be given in a lot of different ways as matrices and so on. Secondly, it makes it easier for us to control the data, which are going through the model. It could be cases of data drifting or something unusual/outliers, which should be dealt with. Thirdly, there is the hardware part of training a model, like how is the memory usage and tracks CPU/GPU. 
+
+Due to these opportunities, it would have been nice to have and we could see if our model was deployed to the cloud that this should be a fundamental part of us using the cloud.
 
 ### Question 24
 
