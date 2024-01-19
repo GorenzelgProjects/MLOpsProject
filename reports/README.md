@@ -613,6 +613,6 @@ Students s214649 and s190464 was in charge of developing the pytorch models, tra
 
 s190464 was in charge of developing the docker files/images, DVC- alongside the fastAPI implementation. He also did the graphical designs of the project.
 
-s214622 was in charge of developing the pytests-files and everything Google cloud (Buckets, Engine, Builds, Clouds runs and Vertex AI), including it's overall idea in the MLops stack.
+s214622 was in charge of developing the pytests-files, profiling, coverage, and everything about Google cloud (Buckets, Engine, Builds, Clouds runs and Vertex AI), including its overall idea in the MLops stack.
 
 All members contributed to the report and are familiar with the code, even though they did not necessarily write it themselves.
