@@ -487,7 +487,9 @@ We tried a lot with different settings and versions. We should probably have sor
 >
 > Answer:
 
-We build our images locally on our computers, therefore there is nothing in this history. 
+We build our images locally on our computers, therefore there is nothing in this history. But we can write a bit about what Cloud build is:
+
+On Google Cloud you can upload source code from a computer. From the code, Google Cloud then builds a container to this code, where you can specify a lot of settings. The result is an artifact, like a docker container in our case. Furthermore, this function also can provide an extra security for a system chain. Cloud Build would ideally have been one of the important aspects of a working application chain.
 
 ### Question 22
 
