@@ -608,7 +608,11 @@ a project and activating API and bucket. But from there it was time-consuming.
 > Answer:
 
 Student s214649 was in charge of developing the cookiecutter structure and the initial github setup. Furthermore implementation of github actions. He also did Hydra and Wandb setup in the pytorch networks.
+
 Students s214649 and s190464 was in charge of developing the pytorch models, train- and test-loop.
+
 s190464 was in charge of developing the docker files/images, DVC- alongside the fastAPI implementation. He also did the graphical designs of the project.
+
 s214622 was in charge of developing the pytests-files and everything Google cloud (Buckets, Engine, Builds, Clouds runs and Vertex AI), including it's overall idea in the MLops stack.
+
 All members contributed to the report and are familiar with the code, even though they did not necessarily write it themselves.
